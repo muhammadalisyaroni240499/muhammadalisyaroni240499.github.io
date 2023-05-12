@@ -159,18 +159,26 @@
             </div>
             <div class="row justify-content-center">
                 <div class="col-md-6">
-                    <form>
+                    <div class="tempat-alert"></div>
+                    <form name="myPortofolioContactForm">
                         <div class="mb-3">
                             <label for="name" class="form-label">Nama Lengkap</label>
-                            <input type="text" class="form-control" id="name" aria-describedby="emailHelp">
+                            <input type="text" class="form-control" id="name" aria-describedby="emailHelp" name="nama">
 
                             <label for="email" class="form-label">Alamat Email</label>
-                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp">
+                            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                                name="email">
 
                             <label for="pesan" class="form-label">Pesan</label>
-                            <textarea class="form-control" id="pesan" rows="3"></textarea>
+                            <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-dark">Kirim Pesan</button>
+
+                        <button type="submit" class="btn btn-dark btn-kirim">Kirim Pesan</button>
+
+                        <button class="btn btn-dark btn-loading d-none" type="button" disabled>
+                            <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                            Mengirim..
+                        </button>
                     </form>
                 </div>
             </div>
@@ -199,7 +207,10 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
 
+    <!-- Custom CSS -->
     <script src="script.js"></script>
+
+
 </body>
 
 </html>
